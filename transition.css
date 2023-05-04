@@ -1,0 +1,135 @@
+html {
+	/* color-scheme: light dark; */
+}
+
+body {
+	margin: 3rem;
+	font-size: 2rem;
+	font-family: "poppins";
+	background-color: bisque;
+}
+
+/* LA PARTIE TRANSITION */
+
+.maTransition {
+	margin: 1rem;
+	padding: 1rem;
+	background: hsl(200 50% 50% / 0.4);
+	border-radius: 0.5rem;
+
+	display: grid;
+	transition: grid-template-rows 500ms ease-in-out;
+	/* pour cacher */
+	grid-template-rows: 0fr;
+}
+
+.maTransition > div {
+	/* pour cacher */
+	overflow: hidden;
+}
+
+.maTransition:hover {
+	grid-template-rows: 1fr;
+}
+
+/* LAPARTIE ACCORDEON */
+
+.accordeon {
+	max-width: 400px;
+	box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+	border-radius: 0.5rem;
+	background-color: aquamarine;
+	/* margin: 1rem;
+	padding: 1rem; */
+}
+.accordeonLabel {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-right: 2rem;
+	position: relative;
+	background-color: red;
+	cursor: pointer;
+	font-weight: bold;
+	color: azure;
+	transition: background 200ms;
+}
+.accordeonLabel:hover {
+	background: rgb(200, 200, 0);
+}
+
+.accordeonContent {
+	position: relative;
+	background-color: greenyellow;
+	line-height: 2rem;
+	font-size: 1.5rem;
+	display: none;
+}
+.accordeonInput {
+	display: none;
+}
+
+.accordeonInput:checked ~ .accordeonContent {
+	display: block;
+}
+
+.accordeonLabel img {
+	transition: transform 0.3s;
+}
+
+.accordeonInput:checked ~ .accordeonLabel img {
+	transform: rotate(180deg);
+}
+
+/* LA PARTIE SPOIL */
+
+.maBoxSpoil {
+	border: 2px solid blue;
+}
+
+.spoiler {
+	max-width: 400px;
+	box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+	border-radius: 0.5rem;
+	background-color: aquamarine;
+	/* margin: 1rem;
+	padding: 1rem; */
+}
+.spoilLabel {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-right: 2rem;
+	position: relative;
+	background-color: red;
+	cursor: pointer;
+	font-weight: bold;
+	color: azure;
+	transition: background 200ms;
+}
+.spoilLabel:hover {
+	background: rgb(200, 200, 0);
+}
+
+.spoilContent {
+	position: relative;
+	background-color: greenyellow;
+	line-height: 2rem;
+	font-size: 1.5rem;
+	display: none;
+}
+.spoilInput {
+	display: none;
+}
+
+.spoilInput:checked ~ .spoilContent {
+	display: block;
+}
+
+.spoilLabel img {
+	transition: transform 0.3s;
+}
+
+.spoilInput:checked ~ .spoilLabel {
+	display: none;
+}

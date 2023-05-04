@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modal HTML</title>
+
+  <style>
+    dialog::backdrop {
+      background-color: rgba(200, 100, 50, 0.5)
+    }
+
+    .maModal {
+      color: green;
+      border-radius: 1rem;
+      border: solid 2px red;
+    }
+
+    .maModal div {
+      padding: 2rem;
+    }
+
+    .maModal button {
+      border-radius: 1rem;
+      background-color: aqua;
+      padding: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <button data-open-modal>Ouvrir</button>
+
+  <dialog data-modal class="maModal">
+    <div>Ceci est une Modal</div>
+    <button data-close-modal>Fermer</button>
+  </dialog>
+
+  <script>
+    const openButton = document.querySelector("[data-open-modal]")
+    const closeButton = document.querySelector("[data-close-modal]")
+    const modal = document.querySelector("[data-modal]")
+
+    openButton.addEventListener("click", () => {
+      // for classique modal
+      modal.showModal()
+      // for dialog box
+      modal.show()
+    })
+
+    closeButton.addEventListener("click", () => {
+      modal.close()
+    })
+  </script>
+</body>
+
+</html>

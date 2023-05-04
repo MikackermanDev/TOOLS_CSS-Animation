@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="transition.css">
+  <script src="transition.js"></script>
+  <title>transition HTML</title>
+</head>
+
+<body>
+  <div class="wrapper1">
+    <h2>TRANSITION + HOVER</h2>
+    <div class="maTransition">
+      <div>c'est génial !!</div>
+    </div>
+    <div class="maTransition">
+      <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique earum autem nemo officia dolorum cumque
+        temporibus porro velit eligendi iusto.</div>
+    </div>
+  </div>
+
+  <h2>ACCORDEON Checkbox</h2>
+  <div class="accordeon">
+    <div>
+      <input type="checkbox" name="unNom" id="section1" class="accordeonInput">
+      <label for="section1" class="accordeonLabel">
+        <div>Section #1</div>
+        <img src="" alt="triangle" width="20px">
+      </label>
+      <div class="accordeonContent">Les vidéos vous permettent de faire passer votre message de façon convaincante.
+        Quand vous cliquez sur Vidéo en ligne, vous pouvez coller le code incorporé de la vidéo que vous souhaitez
+        ajouter.</div>
+    </div>
+
+
+    <div>
+      <input type="checkbox" name="unNom" id="section2" class="accordeonInput">
+      <label for="section2" class="accordeonLabel">
+        <div>Section #2</div>
+        <img src="" alt="triangle" width="20px">
+      </label>
+      <div class="accordeonContent">Vous pouvez également taper un mot-clé pour rechercher en ligne la vidéo qui
+        convient le mieux à votre document. Pour donner un aspect professionnel à votre document, Word offre des
+        conceptions d'en-tête, de pied de page, de page de garde et de zone de texte qui se complètent mutuellement.
+      </div>
+    </div>
+
+    <div>
+      <input type="checkbox" name="unNom" id="section3" class="accordeonInput">
+      <label for="section3" class="accordeonLabel">
+        <div>Section #3</div>
+        <img src="" alt="triangle" width="20px">
+      </label>
+      <div class="accordeonContent">Vous pouvez par exemple ajouter une page de garde, un en-tête et une barre latérale
+        identiques. Cliquez sur Insérer et sélectionnez les éléments de votre choix dans les différentes galeries</div>
+    </div>
+  </div>
+
+  <h2>ACCORDEON Radio</h2>
+  <div class="accordeon">
+    <div>
+      <input type="radio" name="unNom" id="section4" class="accordeonInput">
+      <label for="section4" class="accordeonLabel">
+        <div>Section #4</div>
+        <img src="" alt="triangle" width="20px">
+      </label>
+      <div class="accordeonContent">Les vidéos vous permettent de faire passer votre message de façon convaincante.
+        Quand vous cliquez sur Vidéo en ligne, vous pouvez coller le code incorporé de la vidéo que vous souhaitez
+        ajouter.</div>
+    </div>
+    <div>
+
+      <input type="radio" name="unNom" id="section5" class="accordeonInput">
+      <label for="section5" class="accordeonLabel">
+        <div>Section #5</div>
+        <img src="" alt="triangle" width="20px">
+      </label>
+      <div class="accordeonContent">Vous pouvez également taper un mot-clé pour rechercher en ligne la vidéo qui
+        convient le mieux à votre document. Pour donner un aspect professionnel à votre document, Word offre des
+        conceptions d'en-tête, de pied de page, de page de garde et de zone de texte qui se complètent mutuellement.
+      </div>
+    </div>
+
+    <div>
+
+      <input type="radio" name="unNom" id="section6" class="accordeonInput">
+      <label for="section6" class="accordeonLabel">
+        <div>Section #6</div>
+        <img src="" alt="triangle" width="20px">
+      </label>
+      <div class="accordeonContent">Vous pouvez par exemple ajouter une page de garde, un en-tête et une barre latérale
+        identiques. Cliquez sur Insérer et sélectionnez les éléments de votre choix dans les différentes galeries</div>
+
+    </div>
+  </div>
+
+  <h2>SPOILER ALERT </h2>
+  <div class="spoiler">
+    <div class="maBoxSpoil">
+
+      <input type="checkbox" name="unNom" id="spoil1" class="spoilInput">
+      <label for="spoil1" class="spoilLabel">
+        <div>Spoiler</div>
+      </label>
+      <div class="spoilContent">Et donc c'est triste qd xxxxx meurt à la fin</div>
+    </div>
+
+  </div>
+
+
+  <script>
+    let lien = "src/img/sort-down.png";
+    let images = document.querySelectorAll(".accordeon img");
+    for (let i = 0; i < images.length; i++) {
+      images[i].src = lien;
+    }
+  </script>
+</body>
+
+</html>

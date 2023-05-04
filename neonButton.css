@@ -1,0 +1,24 @@
+@font-face {
+	font-family: "SfDistantGalaxyOutlineItalic-4yA4";
+	src: url("src/font/SfDistantGalaxyOutlineItalic-4yA4.ttf") format("truetype");
+}
+@font-face {
+	font-family: "SfDistantGalaxy-0l3d.ttf";
+	src: url("src/font/SfDistantGalaxy-0l3d.ttf") format("truetype");
+}
+
+.monConteneur a {
+	text-decoration: none;
+	color: blue;
+}
+.monConteneur a:hover {
+	color: red;
+	transition: 0.5s;
+}
+.monConteneur .bouton1,
+.bouton3 {
+	font-family: "SfDistantGalaxy-0l3d.ttf";
+}
+.monConteneur .bouton2 {
+	font-family: "SfDistantGalaxyOutlineItalic-4yA4";
+}
