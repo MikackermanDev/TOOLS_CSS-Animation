@@ -7,18 +7,136 @@
 	src: url("src/font/SfDistantGalaxy-0l3d.ttf") format("truetype");
 }
 
-.monConteneur a {
-	text-decoration: none;
-	color: blue;
+:root {
+	--bleu: rgb(20, 50, 200);
+	--rouge: rgb(200, 50, 20);
+	--vert: rgb(50, 150, 50);
+	--violet: rgb(200, 20, 200);
+	--jaune: rgb(200, 200, 20);
 }
-.monConteneur a:hover {
-	color: red;
-	transition: 0.5s;
-}
-.monConteneur .bouton1,
-.bouton3 {
+
+.monConteneur .bouton {
 	font-family: "SfDistantGalaxy-0l3d.ttf";
 }
-.monConteneur .bouton2 {
+.monConteneur #boutonSpace {
 	font-family: "SfDistantGalaxyOutlineItalic-4yA4";
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	background-image: url;
+}
+
+.monConteneur {
+	background-color: grey;
+	display: flex;
+	justify-content: right;
+	align-items: center;
+	height: 100px;
+	padding-bottom: 30px;
+}
+
+.monConteneur a {
+	color: var(--bleu);
+	position: relative;
+	display: inline-block;
+	padding: 10px;
+	letter-spacing: 0.2rem;
+	font-size: 1.2rem;
+	font-weight: bold;
+	transition: 0.5s;
+	overflow: hidden;
+	margin: 10px;
+	background-color: var(--vert);
+}
+.monConteneur a:hover {
+	color: var(--jaune);
+	transition: 0.5s;
+	background-color: var(--violet);
+	box-shadow: 0 0 5px var(--jaune), 0 0 25px var(--jaune), 0 0 50px var(--jaune),
+		0 0 200px var(--jaune);
+	-webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+	/* Deprecié et non fonctionnel sur Firefox */
+}
+
+a span {
+	position: absolute;
+	display: block;
+}
+a span:nth-child(1) {
+	/* coin de départ en haut à gauche */
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background: linear-gradient(90deg, transparent, white);
+	animation: monAnimation1 1s infinite;
+}
+
+@keyframes monAnimation1 {
+	0% {
+		left: -100%;
+	}
+	100% {
+		left: 100%;
+	}
+}
+a span:nth-child(2) {
+	/* coin de départ en haut à droite */
+	top: 0;
+	right: 0;
+	width: 1px;
+	height: 100%;
+	background: linear-gradient(180deg, transparent, white);
+	animation: monAnimation2 1s infinite;
+	animation-delay: 0.25s;
+}
+
+@keyframes monAnimation2 {
+	0% {
+		top: -100%;
+	}
+	100% {
+		top: 100%;
+	}
+}
+a span:nth-child(3) {
+	/* coin de départ en bas à droite */
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 1px;
+	background: linear-gradient(270deg, transparent, white);
+	animation: monAnimation3 1s infinite;
+	animation-delay: 0.5s;
+}
+
+@keyframes monAnimation3 {
+	0% {
+		right: -100%;
+	}
+	100% {
+		right: 100%;
+	}
+}
+a span:nth-child(4) {
+	bottom: 0;
+	left: 0;
+	width: 1px;
+	height: 100%;
+	background: linear-gradient(360deg, transparent, white);
+	animation: monAnimation4 1s infinite;
+	animation-delay: 0.75s;
+}
+
+@keyframes monAnimation4 {
+	0% {
+		bottom: -100%;
+	}
+	100% {
+		bottom: 100%;
+	}
 }
