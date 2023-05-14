@@ -14,7 +14,7 @@
 	--violet: rgb(200, 20, 200);
 	--jaune: rgb(200, 200, 20);
 	--clr-neon: rgb(20, 230, 255);
-	--clr-bg: rgb(100, 100, 100);
+	--clr-bg: rgb(50, 50, 50);
 }
 
 .monConteneur .bouton {
@@ -165,9 +165,13 @@ a span:nth-child(4) {
 }
 
 .monConteneur2 {
-	min-height: 100vh;
-	display: grid;
-	place-items: center;
+	position: absolute;
+	height: 80dvh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
 	background: var(--clr-bg);
 	color: var(--clr-neon);
 	font-family: "Balsamiq Sans";
