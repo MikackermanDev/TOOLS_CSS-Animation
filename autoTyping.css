@@ -1,40 +1,19 @@
-:root {
-	--steps: 30;
-}
 body {
 	margin: 0;
 	padding: 0;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	text-decoration: none;
 }
 
-.monConteneur {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+.monConteneur h3 {
+	margin: 1rem;
+	padding: 1rem;
+	background-color: aqua;
+	text-align: justify;
 }
 
-.typing-text {
-	width: auto;
-	white-space: nowrap;
-	overflow: hidden;
-	border-right: 3px solid;
-	font-size: 2rem;
-	animation: typing 2s steps(var(--steps)), blink 0.5s step-end infinite alternate;
-}
-
-@keyframes typing {
-	from {
-		width: 0;
-	}
-	to {
-		width: 100%;
-	}
-}
-
-@keyframes blink {
-	50% {
-		border-color: transparent;
-	}
+.lorem {
+	margin: 1rem;
+	padding: 1rem;
+	background-color: aqua;
+	text-align: justify;
 }
