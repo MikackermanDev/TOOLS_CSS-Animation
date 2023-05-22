@@ -9,29 +9,46 @@
   <link rel="stylesheet" href="skeleton.css">
 </head>
 
-<body>
-  <div class="grid"></div>
+<div class="maGrid">
 
-  <template id="card-template">
-    <div class="card">
-      <div class="header">
-        <img class="header-img skeleton" src="https://source.unsplash.com/100x100/?nature" />
-        <div class="title" data-title>
-          <!-- nombre de ligne du mode skeleton -->
-          <div class="skeleton skeleton-text"></div>
-          <div class="skeleton skeleton-text"></div>
-        </div>
-      </div>
-      <div data-body>
-        <!-- nombre de ligne du mode skeleton -->
-        <div class="skeleton skeleton-text"></div>
-        <div class="skeleton skeleton-text"></div>
+
+  <div class="maCard">
+    <div class="monHeader">
+      <img class="monHeader-img monSkeleton" src="https://source.unsplash.com/100x100/?nature">
+      <div class="monTitre" data-title>Titre de la card</div>
+    </div>
+    <div data-body>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, atque.</div>
+  </div>
+  <div class="maCard">
+    <div class="monHeader">
+      <img class="monHeader-img monSkeleton" src="https://source.unsplash.com/100x100/?nature">
+      <div class="monTitre" data-title>Titre de la card 2 très très long tellement longque c'en est chiant</div>
+    </div>
+    <div data-body>Texte quelconque Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, illum culpa!
+      Cumque voluptatibus et neque!</div>
+  </div>
+</div>
+
+<div class="grid"></div>
+
+<template id="card-template">
+  <div class="card">
+    <div class="header">
+      <img class="header-img skeleton" src="https://source.unsplash.com/100x100/?nature" />
+      <div class="title" data-title>
         <div class="skeleton skeleton-text"></div>
         <div class="skeleton skeleton-text"></div>
       </div>
     </div>
-  </template>
-</body>
+    <div data-body>
+      <div class="skeleton skeleton-text"></div>
+      <div class="skeleton skeleton-text"></div>
+      <div class="skeleton skeleton-text"></div>
+      <div class="skeleton skeleton-text"></div>
+    </div>
+  </div>
+</template>
+
 <script>
   const grid = document.querySelector('.grid')
   const cardTemplate = document.getElementById('card-template')

@@ -1,0 +1,34 @@
+.monConteneur {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: 50px;
+	overflow-x: hidden;
+}
+
+input[type="radio"].demo3 {
+	display: none; /* masque le bouton rond de base */
+}
+.demo3 + label {
+	transition: background-color 0.5s;
+	cursor: pointer;
+	display: inline-block;
+	width: 50px;
+	height: 20px;
+	border-radius: 10px;
+	border: 2px solid #2f249a; /* bordure du bouton */
+}
+input[type="radio"].demo3:checked + label {
+	background-color: green; /* change la couleur de fond du bouton sélectionné */
+}
+input[type="radio"].demo3 + label:hover {
+	background-color: red; /* change la couleur de fond au survol */
+}
+
+.carrousel {
+	background-color: aqua;
+}
+.boutonRadio {
+	background-color: gray;
+}

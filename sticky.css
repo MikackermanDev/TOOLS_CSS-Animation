@@ -60,8 +60,18 @@ section:nth-child(4) {
 	background-color: var(--color4);
 }
 
+footer {
+	background-color: gray;
+	margin: 0;
+	padding: 0;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 /* Style de la dernière section */
 section:last-child {
-	/* Ajout d'une marge inférieure de 20px pour faire apparaître le footer */
-	margin-bottom: 20px;
+	/* Ajout d'une marge inférieure de 20px pour faire apparaître le footer
+	mais apparemment non necessaire sila hauteur du footer est déjà définit avant ? */
+	/* padding-bottom: 20px; */
 }
